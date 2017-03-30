@@ -1,0 +1,124 @@
+ 
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+ <style>
+	div.fram{
+		width:50%;
+		height:50%;
+		border:solid #000 1px;
+	}
+  </style>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta charset="utf-8" />
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	
+    
+	<title>HSTA</title>
+	<meta name="description" content="Open air Market Uniquely Singapore" />
+	<meta name="keywords" content="Hawker Center Information, Price Tender, Tendering Advisor" />
+
+    <link href="stylesheets/css1.css" rel="stylesheet" type="text/css" />
+	<link href="stylesheets/css2.css" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/css3.css" rel="stylesheet">  
+
+</head>
+
+<body class="lite desktop" data-browser="Chrome Desktop 57.0">
+
+<html ng-app="app">
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.js"></script>
+<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.2.1.js"></script>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+	<div class="overflow">
+		<div id="site">
+
+<header id="header-container">
+	<div id="header" class="mega border clearfix" role="banner" aria-label="header">
+		<div id="menu">
+			<button type="button" value="Menu" id="menu-button" aria-label="main navigation menu" aria-controls="flyoutNav">
+				<span class="icon menu">&#xe58f;</span>
+			</button>
+		</div>
+		<a href="#" class="logo">
+			<img src="images/logo.png" alt="HSTA" id="logo" />
+		</a>
+
+		<ul id="navmenu" role="navigation">
+			<li><a href="https://hsta.mybluemix.net/HCI.html" id="HCI" data-trackinglabel="Hawker Center Information" >Hawker Center Information</a></li>
+			<li><a href="#" id="PT" data-trackinglabel="Past Tenders">Past Tenders</a></li>
+			<li><a href="#" id="TA" data-trackinglabel="Tendering Advisor">Tendering Advisor</a></li>
+		</ul>
+
+		<ul id="utility" role="navigation" >
+			<li class="phone"><a href="#">65-912-345-678</a></li>
+			<li class="login"><a id="login_link" href="#" >Log In</a>
+			</li>
+		</ul>
+	</div>
+</header>
+
+<div id="main">
+<div>
+    <div ng-controller="CarouselDemoCtrl" id="slides_control">
+        <div>
+            <uib-carousel interval="myInterval" active="activeSlide">
+                <uib-slide ng-repeat="slide in slides" index="$index">
+                    <img ng-src="{{slide.image}}" style="margin:auto;">
+                    <div class="carousel-caption">
+                        <h4>Slide {{$index+1}}</h4>
+                    </div>
+                </uib-slide>
+            </uib-carousel>
+        </div>
+    </div>
+</div> 
+
+<script type="text/javascript">
+var app = angular.module('app', ['ui.bootstrap']);
+app.controller('CarouselDemoCtrl', CarouselDemoCtrl);
+
+function CarouselDemoCtrl($scope){
+  $scope.myInterval = 3000;
+  $scope.noWrapSlides = false;
+  $scope.activeSlide = 0;
+  $scope.slides = [
+    {
+      image: 'http://localhost:6001/images/img1.png'
+    },
+    {
+      image: 'http://localhost:6001/images/img2.jpg'
+    },
+    {
+      image: 'http://localhost:6001/images/img3.jpg'
+    }
+  ];
+}
+</script>
+
+	<div class="hl headline batman centered t2 clearfix">
+		<h1>Hawker Stall Tendering Advisor</h1>
+	</div>
+	</div>
+
+		<footer>
+				<section id="legal" class="lite">
+					<div class="wrap clearfix" >
+						<ul class="social neutral" role="navigation" aria-label="Social Links">
+							<li class="facebook"><a href="http://www.facebook.com" target="_blank" aria-label="Facebook">&#xe200;</a></li>
+							<li class="twitter"><a href="http://www.twitter.com" target="_blank" aria-label="Twitter">&#xe201;</a></li>
+							<li class="youtube"><a href="https://www.youtube.com" target="_blank" aria-label="YouTube">&#xe203;</a></li>
+						</ul>
+				</div>
+				</section>
+		</footer>
+</div>
+</div>	
+
+</body>
+</html>

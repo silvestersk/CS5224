@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html ng-app="PastTender">
+              <style>
+              input { margin-bottom: 10px; }
+                
+              table, th , td  {
+                border: 1px solid purple;
+                border-collapse: collapse;
+                padding: 5px;
+              }
+              table tr:nth-child(odd) {
+                background-color: #f1f1f1;
+              }
+              table tr:nth-child(even) {
+                background-color: #ffffff;
+              }
+              .dropdown {
+                  position: relative;
+                  display: inline-block;
+              }
+
+              .dropdown-content {
+                  display: none;
+                  position: absolute;
+                  background-color: #f9f9f9;
+                  min-width: 160px;
+                  box-shadow: 0px 8px 20px 0px rgba(0,0,0,0.2);
+                  padding: 12px 20px;
+                  z-index: 1;
+              }
+
+              .dropdown:hover .dropdown-content {
+                  display: block;
+              }
+              </style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+  <head>
+    <script data-require="angular.js@1.2.22" data-semver="1.2.22" src="https://code.angularjs.org/1.2.22/angular.js"></script>
+    <script src="usersController.js"></script>
+    <script src="userRepoService.js"></script>
+   <link href="stylesheets/style.css" rel="stylesheet">  
+  </head>
+
+<script angular.module('app', ['angular.filter'])></script>
+ <script var res1 = alasql('SELECT distinct HAWKER_CENTRE FROM ?',
+                     [$scope.users]);></script>
+
+  <body ng-controller="UsersController">
+    <h4>Hawker Centre </h4>
+    <select id="UserSelector" style="width: 40%;">
+       <option ng-repeat="x in users" value="{{user.id}}">{{x.HAWKER_CENTRE}}</option>
+    </select>
+
+    <h4>Trade</h4>
+    <select id="UserSelector" style="width: 40%;">
+       <option ng-repeat="x in users" value="{{user.id}}">{{x.TRADE}}</option>
+    </select>
+
+<p>
+<label><h4>Tendered bid:</h4>
+    <input type="text" name="input1" ng-model="example.text" style="width: 10%;"
+           ng-pattern="example.word" required ng-trim="false">
+  </label>
+ 
+    <input type="text" name="input2" ng-model="example.text" style="width: 10%;"
+           ng-pattern="example.word" required ng-trim="false">
+  </label>
+</p>
+<p>
+
+<div ng-controller="myCtrl">
+  <p>Click the button to run:</p>
+  <button ng-click="myapp()">Sumbit</button>
+</div>
+
+<div ng-app="myApp" ng-controller="UsersController1">
+ 
+<table>
+  <tr ng-repeat="x in users">
+    <td>{{ x.HAWKER_CENTRE }}</td>
+    <td>{{ x.Stall number }}</td>
+    <td>{{ x.Apporximate Stall area(SQM)}}</td>
+    <td>{{ x.TRADE }}</td>
+    <td>{{ x.tendered bid}}</td>
+    <td>{{ x.Tender Month}}</td>
+  </tr>
+</table>
+ 
+</div>
+ 
+<script>
+var app = angular.module('myApp', []);
+app.controller('customersCtrl', function($scope, $http) {
+   $http.get("customers_mysql.php")
+   .then(function (response) {$scope.names = response.data.records;});
+});
+</script>
+
+</p>
+
+    <md-content md-scroll-y layout="column" flex>
+      <div ng-view layout-padding flex="noshrink" class="docs-ng-view"></div>
+
+      <md-button class="md-fab md-fab-bottom-right docs-scroll-fab"
+                 docs-scroll-class="scrolling"
+                 ng-click="scrollTop()"
+                 aria-label="Back to Top">
+        <md-tooltip md-direction="top">Back to Top</md-tooltip>
+        <md-icon md-svg-src="images/ic_arrow_up_24px.svg"></md-icon>
+      </md-button>
+
+    </md-content>
+
+
+  </body>
+</html>
+
+

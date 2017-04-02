@@ -33,9 +33,12 @@ ibmdb.open(dbConnString,function(err,conn) {
         console.log("Error :", err);
         return;
       } else {
-        res.send(rows);
+       res.send(rows);
+        //res.json(rows);
         conn.close(function() {
           console.log("Connection sucessfully closed");
+          console.log(rows[0].Name);
+
         });
       };
     });

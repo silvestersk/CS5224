@@ -13,6 +13,15 @@
 
 </head>
 <body>
+    <h1>Hawker Centre</h1>
+    <select id="UserSelector" style="width: 100%;">
+      <option ng-repeat="user in users" value="{{user.id}}">{{user.HAWKER_CENTRE}}</option>
+    </select>
+
+<br>
+<br>
+<br>
+
 <div ng-controller="MapController">
     <div id="map"></div>
     <div id="repeat" ng-repeat="marker in markers | orderBy : 'title'">

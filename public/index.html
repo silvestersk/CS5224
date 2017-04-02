@@ -1,6 +1,7 @@
  
 <!DOCTYPE html>
 <html ng-app="app">
+	
 <head>
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -15,6 +16,7 @@
     <link href="stylesheets/css1.css" rel="stylesheet" type="text/css" />
 	<link href="stylesheets/css2.css" rel="stylesheet" type="text/css" />
     <link href="stylesheets/css3.css" rel="stylesheet">  
+    <link href="stylesheets/style1.css" rel="stylesheet">  
 
 </head>
 
@@ -42,9 +44,9 @@
 		</a>
 
 		<ul id="navmenu" role="navigation">
-			<li><a href="#HCI?scrollTo=HCI.html" id="HCI" data-trackinglabel="Hawker Center Information" >Hawker Center Information</a></li>
-			<li><a href="#PT?scrollTo=PT.html" id="PT" data-trackinglabel="Past Tenders">Past Tenders</a></li>
-			<li><a href="#TA?scrollTo=TA.html" id="TA" data-trackinglabel="Tendering Advisor">Tendering Advisor</a></li>
+			<li><a href="HCI?scrollTo=HawkerCI.html" id="HCI" data-trackinglabel="Hawker Center Information" >Hawker Center Information</a></li>
+			<li><a href="PT?scrollTo=PT.html" id="PT" data-trackinglabel="Past Tenders">Past Tenders</a></li>
+			<li><a href="TA?scrollTo=TA.html" id="TA" data-trackinglabel="Tendering Advisor">Tendering Advisor</a></li>
 		</ul>
 
 		<ul id="utility" role="navigation" >
@@ -93,8 +95,13 @@ function CarouselDemoCtrl($scope){
 }
 </script>
 </div>
-<div ng-view></div>
- {{scrollTo}}
+
+</div>
+<a href="#0" class="cd-top">Top</a>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/main.js"></script> <!-- Gem jQuery -->
+<br>
+<br>
 
 		<footer>
 	<div class="hl headline batman centered t2 clearfix">
@@ -111,6 +118,10 @@ function CarouselDemoCtrl($scope){
 				</section>
 		</footer>
 </div>
-</div>	
+
+
+
+
+
 </body>
 </html>
